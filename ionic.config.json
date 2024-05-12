@@ -1,0 +1,8 @@
+{
+  "name": "Centinela digital",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "bbc74912"
+}
