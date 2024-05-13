@@ -5,31 +5,24 @@
   Proveedores</h1>
 
   <ion-item>
-    <ion-input label="Nombre de la empresa" label-placement="floating" fill="outline"  placeholder="Ingrese Nombre de la empresa"></ion-input>
-  </ion-item>
-  
-  <ion-item>
     <ion-input label="Patente de vehículo" label-placement="floating" fill="outline"  placeholder="Ingrese Patente de vehículo"></ion-input>
   </ion-item>
-  
-  <ion-item>
-    <ion-input label="N° de orden de compra" label-placement="floating" fill="outline" placeholder="Ingrese Número de orden de compra"></ion-input>
-  </ion-item>
-<h3>Ingreso: </h3>
+
+  <h3>Salida:</h3>
   <ion-datetime presentation="date-time" [preferWheel]="true"></ion-datetime>
   <ion-datetime presentation="time"></ion-datetime>
 
-  <h3>Observaciones:</h3>
+<h3>Observaciones:</h3>
   <ion-textarea
   placeholder="Opcional"
   [clearOnEdit]="true"
 ></ion-textarea>
 
-
 </ion-list>
 <ion-item>
 <ion-button expand="undefined">GUARDAR</ion-button>
 </ion-item>
+
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">

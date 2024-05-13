@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'prov-ingreso',
     loadChildren: () => import('./prov-ingreso/prov-ingreso.module').then( m => m.ProvIngresoPageModule)
   },
+  {
+    path: 'prov-salida',
+    loadChildren: () => import('./prov-salida/prov-salida.module').then( m => m.ProvSalidaPageModule)
+  },
 
 ];
 @NgModule({
