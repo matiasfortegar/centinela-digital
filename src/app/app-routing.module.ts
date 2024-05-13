@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'registro-exitoso',
     loadChildren: () => import('./registro-exitoso/registro-exitoso.module').then( m => m.RegistroExitosoPageModule)
   },
+  {
+    path: 'salida-exitoso',
+    loadChildren: () => import('./salida-exitoso/salida-exitoso.module').then( m => m.SalidaExitosoPageModule)
+  },
 
 ];
 @NgModule({
