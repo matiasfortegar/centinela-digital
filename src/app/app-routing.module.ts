@@ -11,7 +11,11 @@ const routes: Routes = [
     path: 'menu-inicio',
     loadChildren: () => import('./menu-inicio/menu-inicio.module').then( m => m.MenuInicioComponentModule)
     // canActivate:[HomeGuard]
+  },  {
+    path: 'registro-exitoso',
+    loadChildren: () => import('./registro-exitoso/registro-exitoso.module').then( m => m.RegistroExitosoPageModule)
   },
+
 ];
 @NgModule({
   imports: [
