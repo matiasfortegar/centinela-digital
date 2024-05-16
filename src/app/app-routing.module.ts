@@ -1,11 +1,25 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
+  },
+  {
+    path: 'menu-inicio',
+    loadChildren: () => import('./menu-inicio/menu-inicio.module').then( m => m.MenuInicioComponentModule)
+    // canActivate:[HomeGuard]
+  },  {
+    path: 'registro-exitoso',
+    loadChildren: () => import('./registro-exitoso/registro-exitoso.module').then( m => m.RegistroExitosoPageModule)
+  },
+  {
+    path: 'salida-exitoso',
+    loadChildren: () => import('./salida-exitoso/salida-exitoso.module').then( m => m.SalidaExitosoPageModule)
+  },
+
 ];
 @NgModule({
   imports: [
