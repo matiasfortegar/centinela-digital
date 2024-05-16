@@ -11,17 +11,14 @@ const routes: Routes = [
     path: 'menu-inicio',
     loadChildren: () => import('./menu-inicio/menu-inicio.module').then( m => m.MenuInicioComponentModule)
     // canActivate:[HomeGuard]
-  },  {
+  },
+  {
     path: 'registro-exitoso',
     loadChildren: () => import('./registro-exitoso/registro-exitoso.module').then( m => m.RegistroExitosoPageModule)
   },
   {
-    path: 'prov-ingreso',
-    loadChildren: () => import('./prov-ingreso/prov-ingreso.module').then( m => m.ProvIngresoPageModule)
-  },
-  {
-    path: 'prov-salida',
-    loadChildren: () => import('./prov-salida/prov-salida.module').then( m => m.ProvSalidaPageModule)
+    path: 'salida-exitoso',
+    loadChildren: () => import('./salida-exitoso/salida-exitoso.module').then( m => m.SalidaExitosoPageModule)
   },
 
 ];
