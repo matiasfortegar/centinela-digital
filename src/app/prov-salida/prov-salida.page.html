@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+</ion-header>
+<ion-list>
+  <ion-item>
+    <ion-button href="./menu-inicio" expand="undefined">Volver</ion-button>
+  </ion-item>
+
+  <h1>Registro de Proveedores</h1>
+
+  <ion-item>
+    <ion-input label="Patente de vehículo" label-placement="floating" fill="outline"  placeholder="Ingrese Patente de vehículo"></ion-input>
+  </ion-item>
+
+  <h3>Salida:</h3>
+  <ion-datetime presentation="date-time" [preferWheel]="true"></ion-datetime>
+  <ion-datetime presentation="time"></ion-datetime>
+
+<h3>Observaciones:</h3>
+  <ion-textarea
+  placeholder="Opcional"
+  [clearOnEdit]="true"
+></ion-textarea>
+
+</ion-list>
+<ion-item>
+<ion-button href="./salida-exitoso" expand="block">GUARDAR</ion-button>
+</ion-item>
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+
+  </ion-header>
+</ion-content>

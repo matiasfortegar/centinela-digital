@@ -1,22 +1,20 @@
-<ion-card>
-  <ion-card-header>
-    <ion-card-title>Registro Movimiento</ion-card-title>
-    <ion-card-subtitle>Menu Inicio</ion-card-subtitle>
-  </ion-card-header>
+<ion-toolbar>
+  <ion-title size="large">Registros</ion-title>
+</ion-toolbar>
 
   <ion-card-content>
-    <ion-button expand="block" color="success">Ingreso</ion-button> 
+    <ion-button href="./prov-ingreso" expand="block" color="success">Ingreso</ion-button> 
 
     <hr>
 
-    <ion-button expand="block" color="warning">Salida</ion-button> 
+    <ion-button href="./prov-salida" expand="block" color="warning">Salida</ion-button> 
 
     <hr>
 
-    <ion-button expand="block" color="tertiary">Seguridad</ion-button> 
+    <ion-button href="./seguridad" expand="block" color="tertiary">Seguridad</ion-button> 
   </ion-card-content>
-</ion-card>
+
 <hr>
 
-
 <ion-button fill="outline" expand="full" color="danger" (click)="salir()">Cerrar Sesión</ion-button>
+
