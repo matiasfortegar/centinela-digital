@@ -52,8 +52,8 @@ export class LoginComponent  implements OnInit {
     var f = this.formularioLogin.value;
     //Ojo con la exclamación al final, ya que no puede ser asignado un valor que puede ser vacío.
     var usuario = JSON.parse(localStorage.getItem('usuario')!);
-
-    if(usuario.nombre == f.nombre && usuario.password == f.password){
+    
+    if (usuario && usuario.nombre === f.nombre && usuario.password === f.password) {  
       console.log('Ingresado');
       //Funcionalidades sólo para utilizar con guard
       localStorage.setItem('ingresado','true');
