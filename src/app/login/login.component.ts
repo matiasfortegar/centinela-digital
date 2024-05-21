@@ -20,13 +20,33 @@ export class LoginComponent  implements OnInit {
 
   }
 
+
+  // ngOnInit() {
+  //   //this.ingresar();
+  //   if(localStorage.getItem('ingresado'))
+  //   {
+  //     this.navCtrl.navigateRoot('home');
+  //   }
+  // }
+
   ngOnInit() {
-    //this.ingresar();
-    if(localStorage.getItem('ingresado'))
-    {
+    // Inicializamos un usuario de prueba si no existe
+    if (!localStorage.getItem('usuario')) {
+      const usuario = {
+        nombre: 'admin',
+        password: 'admin'
+      };
+      localStorage.setItem('usuario', JSON.stringify(usuario));
+    }
+
+    // Si el usuario ya está ingresado, redirigimos al home
+    if (localStorage.getItem('ingresado')) {
       this.navCtrl.navigateRoot('home');
     }
   }
+
+
+
 
   async ingresar(){
     var f = this.formularioLogin.value;
@@ -37,7 +57,7 @@ export class LoginComponent  implements OnInit {
       console.log('Ingresado');
       //Funcionalidades sólo para utilizar con guard
       localStorage.setItem('ingresado','true');
-      this.navCtrl.navigateRoot('home');
+      this.navCtrl.navigateRoot('menu-inicio');
     }else{
       const alert = await this.alertController.create({
         header: 'Datos incorrectos',
