@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { NavController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-prov-salida',
@@ -10,7 +10,7 @@ import { NavController } from '@ionic/angular';
 export class ProvSalidaPage implements OnInit {
   formularioProveedor: FormGroup;
 
-  constructor(private fb: FormBuilder, private navCtrl: NavController) {
+  constructor(private fb: FormBuilder, private navCtrl: NavController, /*Alertas*/ public alertController: AlertController) {
     this.formularioProveedor = this.fb.group({
       nombreProveedor: ['', Validators.required],
       patenteVehiculo: ['', Validators.required],
@@ -23,6 +23,7 @@ export class ProvSalidaPage implements OnInit {
   ngOnInit() { }
 
   guardar() {
+
     let salida_proveedor = this.formularioProveedor.value;
 
     // Convertir fecha y hora a formato ISO 8601
