@@ -27,7 +27,15 @@ const routes: Routes = [
   {
     path: 'prov-salida',
     loadChildren: () => import('./prov-salida/prov-salida.module').then( m => m.ProvSalidaPageModule)
+  },  {
+    path: 'seguridad',
+    loadChildren: () => import('./seguridad/seguridad.module').then( m => m.SeguridadPageModule)
+  },
+  {
+    path: 'emergencia',
+    loadChildren: () => import('./emergencia/emergencia.module').then( m => m.EmergenciaPageModule)
   }
+
 ];
 @NgModule({
   imports: [
