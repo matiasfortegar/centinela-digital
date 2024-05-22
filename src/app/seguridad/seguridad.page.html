@@ -3,19 +3,28 @@
       <ion-button href="./menu-inicio" expand="undefined">Volver</ion-button>
     </ion-item>
 
-    <h1>Registro de 
-    Proveedores</h1>
-    
-    <ion-card-content>
-      <ion-button href="./noti-exitosa" expand="block" color="success">NOTIFICAR</ion-button> 
+  <ion-card-content>
 
-      <hr>
+      <h1>Registro de 
+      Proveedores</h1>
 
-      <ion-button href="./emergencia" expand="block" color="warning">EMERGENCIA</ion-button> 
+        <ion-textarea
+        placeholder="Escribe tu mensaje"
+        [clearOnEdit]="true"
+        ></ion-textarea>
 
-      <hr>
+        <hr>
 
-      <ion-button href="./menu-inicio" expand="block">Volver al menú</ion-button>
-    </ion-card-content>
+        <ion-button href="./noti-exitosa" expand="block" color="success">NOTIFICAR</ion-button> 
+
+         <hr>
+
+        <ion-button href="./emergencia" expand="block" color="danger">EMERGENCIA</ion-button> 
+
+         <hr>
+
+      <ion-label><i>*Se alertará a todas las unidades para que atiendan su emergencia</i></ion-label>
+
+  </ion-card-content>
 
 </ion-list>
