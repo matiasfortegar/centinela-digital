@@ -47,8 +47,6 @@ const routes: Routes = [
   {
     path: 'listado-ingresos',
     loadChildren: () => import('./listado-ingresos/listado-ingresos.module').then( m => m.ListadoIngresosPageModule)
-  }
-
   },
   {
     path: 'noti-exitosa',
