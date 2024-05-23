@@ -39,7 +39,8 @@ const routes: Routes = [
   {
     path: 'emergencia',
     loadChildren: () => import('./emergencia/emergencia.module').then( m => m.EmergenciaPageModule)
-  },  {
+  },
+  {
     path: 'listado-salidas',
     loadChildren: () => import('./listado-salidas/listado-salidas.module').then( m => m.ListadoSalidasPageModule)
   },
@@ -48,6 +49,11 @@ const routes: Routes = [
     loadChildren: () => import('./listado-ingresos/listado-ingresos.module').then( m => m.ListadoIngresosPageModule)
   }
 
+  },
+  {
+    path: 'noti-exitosa',
+    loadChildren: () => import('./noti-exitosa/noti-exitosa.module').then( m => m.NotiExitosaPageModule)
+  }
 
 ];
 @NgModule({
