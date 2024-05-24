@@ -1,18 +1,30 @@
-<ion-list>
-  <ion-item>
-    <ion-button href="./prov-salida" expand="undefined">Volver</ion-button>
-  </ion-item>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro de Salida Exitoso</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <h1>Registro de Salida Exitoso</h1>
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-button [routerLink]="['/prov-salida']" expand="undefined">Volver</ion-button>
+    </ion-item>
 
-  <ion-item>
+    <h1>Registro de Salida Exitoso</h1>
+
+    <ion-item>
       <ion-img
-      src="https://e7.pngegg.com/pngimages/335/839/png-clipart-computer-icons-exit-miscellaneous-purple.png"
-      alt="The Wisconsin State Capitol building in Madison, WI at night"
-    ></ion-img>
-  </ion-item>
+        src="https://e7.pngegg.com/pngimages/335/839/png-clipart-computer-icons-exit-miscellaneous-purple.png"
+        alt="Registro de Salida Exitoso"
+      ></ion-img>
+    </ion-item>
 
-<ion-button href="./menu-inicio" expand="block">Volver al menú</ion-button>
-<!-- <ion-button fill="clear">Action 2</ion-button> -->
+    <ion-item>
+      <ion-button [routerLink]="['/menu-inicio']" expand="block">Volver al menú</ion-button>
+    </ion-item>
 
-</ion-list>
+    <ion-item>
+      <ion-button [routerLink]="['/listado-salidas']" expand="block">Ver Listado de Salidas</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

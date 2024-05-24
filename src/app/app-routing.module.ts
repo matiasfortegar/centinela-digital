@@ -3,6 +3,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
   },
@@ -34,7 +39,15 @@ const routes: Routes = [
   {
     path: 'emergencia',
     loadChildren: () => import('./emergencia/emergencia.module').then( m => m.EmergenciaPageModule)
+  },  {
+    path: 'listado-salidas',
+    loadChildren: () => import('./listado-salidas/listado-salidas.module').then( m => m.ListadoSalidasPageModule)
+  },
+  {
+    path: 'listado-ingresos',
+    loadChildren: () => import('./listado-ingresos/listado-ingresos.module').then( m => m.ListadoIngresosPageModule)
   }
+
 
 ];
 @NgModule({
