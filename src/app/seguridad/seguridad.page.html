@@ -1,29 +1,41 @@
+<ion-content>
 <ion-list>
     <ion-item>
-      <ion-button href="./menu-inicio" expand="undefined">Volver</ion-button>
+      <ion-button [routerLink]="'/menu-inicio'" expand="undefined">Volver</ion-button>
     </ion-item>
+     
+    <ion-item>
+      <ion-label>
+        <h1>Seguridad</h1>
+      </ion-label>
+      </ion-item>
 
-  <ion-card-content>
 
-      <h1>Seguridad</h1>
+      <form [formGroup]="formularioSeguridad">
+        <ion-item>      
 
         <ion-textarea
+        formControlName="notificar"
         placeholder="Escribe tu mensaje"
         [clearOnEdit]="true"
         ></ion-textarea>
+        </ion-item>
 
         <hr>
-
-        <ion-button href="./noti-exitosa" expand="block" color="success">NOTIFICAR</ion-button> 
-
-         <hr>
-
+      <ion-item>
+        <ion-button (click)="guardarNota()" expand="block" color="success">NOTIFICAR</ion-button> 
+      </ion-item>
+        <hr>
+      <ion-item>
         <ion-button href="./emergencia" expand="block" color="danger">EMERGENCIA</ion-button> 
-
+      </ion-item>
          <hr>
+      <ion-item>
 
       <ion-label><i>*Se alertará a todas las unidades para que atiendan su emergencia</i></ion-label>
+    </ion-item>
 
-  </ion-card-content>
 
+</form>
 </ion-list>
+</ion-content>
