@@ -12,7 +12,13 @@
       ></ion-img>
     </ion-item>
 
-  <ion-button href="./menu-inicio" expand="block">Volver al menú</ion-button>
-  <!-- <ion-button fill="clear">Action 2</ion-button> -->
+  
+  <ion-item>
+    <ion-button [routerLink]="['/menu-inicio']" expand="block">Volver al menú</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-button [routerLink]="['/listado-ingresos']" expand="block">Ver Movimientos registrados</ion-button>
+  </ion-item>
 
 </ion-list>
