@@ -1,20 +1,20 @@
-<ion-toolbar>
-  <ion-title size="large">Registros</ion-title>
-</ion-toolbar>
 
-  <ion-card-content>
-    <ion-button href="./prov-ingreso" expand="block" color="success">Ingreso</ion-button> 
+<ion-list>
 
-    <hr>
+    <h1>Registros</h1>
 
-    <ion-button href="./prov-salida" expand="block" color="warning">Salida</ion-button> 
+    <ion-button href="./prov-ingreso" expand="block" color="primary">Ingreso</ion-button> 
 
     <hr>
 
-    <ion-button href="./seguridad" expand="block" color="tertiary">Seguridad</ion-button> 
-  </ion-card-content>
+    <ion-button href="./prov-salida" expand="block" color="primary">Salida</ion-button> 
+
+    <hr>
+
+    <ion-button href="./seguridad" expand="block" color="warning">Seguridad</ion-button> 
+  </ion-list>
 
 <hr>
 
-<ion-button fill="outline" expand="full" color="danger" (click)="salir()">Cerrar Sesión</ion-button>
 
+<ion-button href="./login" fill="outline" expand="block" color="danger">Cerrar Sesión</ion-button>
