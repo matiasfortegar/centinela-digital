@@ -1,3 +1,10 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro de Proveedores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
   <ion-list>
     <ion-item>
       <ion-button [routerLink]="'/menu-inicio'" expand="undefined">Volver</ion-button>
@@ -51,13 +58,23 @@
         </ion-datetime>
       </ion-item>
 
-<h3>Observaciones:</h3>
-  <ion-textarea
-  placeholder="Opcional"
-  [clearOnEdit]="true"
-></ion-textarea>
-    </form>
-</ion-list>
-<hr>
+      <ion-item>
+        <ion-label>
+          <h1>Observaciones:</h1>
+        </ion-label>
+      </ion-item>
 
-<ion-button href="./salida-exitoso" expand="block">GUARDAR</ion-button>
+      <ion-item>
+        <ion-textarea
+          formControlName="observaciones"
+          placeholder="Opcional"
+          [clearOnEdit]="true">
+        </ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-button expand="block" (click)="guardar()">GUARDAR</ion-button>
+      </ion-item>
+    </form>
+  </ion-list>
+</ion-content>
