@@ -10,16 +10,17 @@
       <ion-button [routerLink]="['/menu-inicio']" expand="undefined">Volver</ion-button>
     </ion-item>
 
+    <form [formGroup]="formularioProveedor">
     <ion-item>
-      <ion-input label="Nombre de la empresa" label-placement="floating" fill="outline" placeholder="Ingrese Nombre de la empresa"></ion-input>
+      <ion-input formControlName="nombreProveedor" label="Nombre de la empresa" label-placement="floating" fill="outline" placeholder="Ingrese Nombre de la empresa"></ion-input>
     </ion-item>
     <br>
     <ion-item>
-      <ion-input label="Patente de vehículo" label-placement="floating" fill="outline" placeholder="Ingrese Patente de vehículo"></ion-input>
+      <ion-input formControlName="patenteVehiculo" label="Patente de vehículo" label-placement="floating" fill="outline" placeholder="Ingrese Patente de vehículo"></ion-input>
     </ion-item>
     <br>
     <ion-item>
-      <ion-input label="N° de orden de compra" label-placement="floating" fill="outline" placeholder="Ingrese Número de orden de compra"></ion-input>
+      <ion-input  formControlName="numeroOc"  label="N° de orden de compra" label-placement="floating" fill="outline" placeholder="Ingrese Número de orden de compra"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -27,11 +28,20 @@
     <h1>Ingreso: </h1>
     </ion-label>
     </ion-item>
+    
     <ion-item>
-      <ion-datetime presentation="date-time" [preferWheel]="true"></ion-datetime>
+      <ion-datetime
+        formControlName="fechaIngreso"
+        presentation="date"
+        [preferWheel]="true">
+      </ion-datetime>
     </ion-item>
+    
     <ion-item>
-      <ion-datetime presentation="time"></ion-datetime>
+      <ion-datetime
+        formControlName="horaIngreso"
+        presentation="time">
+      </ion-datetime>
     </ion-item>
 
     <ion-item>
@@ -40,11 +50,13 @@
     </ion-label>
     </ion-item>
     <ion-item>
-      <ion-textarea placeholder="Opcional" [clearOnEdit]="true"></ion-textarea>
+      <ion-textarea formControlName="observaciones"  placeholder="Opcional" [clearOnEdit]="true"></ion-textarea>
     </ion-item>
-  </ion-list>
-
+  
+  
   <ion-item>
-    <ion-button [routerLink]="['/registro-exitoso']" expand="block">GUARDAR</ion-button>
+    <ion-button [routerLink]="['/registro-exitoso']" expand="block" (click)="guardar()">GUARDAR</ion-button>
   </ion-item>
+</form>
+</ion-list>
 </ion-content>

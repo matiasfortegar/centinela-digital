@@ -25,10 +25,19 @@ export class ProvSalidaPage implements OnInit {
   guardar() {
 
     let salida_proveedor = this.formularioProveedor.value;
+    // Combinar fecha y hora en un solo objeto Date
+    let fechaSalida = new Date(salida_proveedor.fechaSalida);
+    let horaSalida = new Date(salida_proveedor.horaSalida);
 
-    // Convertir fecha y hora a formato ISO 8601
-    salida_proveedor.fechaSalida = new Date(salida_proveedor.fechaSalida).toISOString().split('T')[0];
-    salida_proveedor.horaSalida = new Date(salida_proveedor.horaSalida).toISOString().split('T')[1];
+    // Ajustar las horas, minutos y segundos de fechaSalida usando horaSalida
+    fechaSalida.setHours(horaSalida.getHours(), horaSalida.getMinutes(), horaSalida.getSeconds());
+
+    if (isNaN(fechaSalida.getTime())) {
+      console.error('Fecha inválida');
+      return;
+    }
+
+    salida_proveedor.fechaSalida = fechaSalida.toISOString();
 
     // Obtener el array existente de `salida_proveedor` o inicializar uno nuevo
     let movimientos = JSON.parse(localStorage.getItem('salida_proveedor') || '[]');
