@@ -1,20 +1,25 @@
 <ion-list>
-  <ion-content>
     <ion-item>
-      <ion-button href="./Seguridad" expand="undefined">Volver</ion-button>
+      <ion-button href="./seguridad" expand="undefined">Volver</ion-button>
     </ion-item>
   
     <h1>Emergencia</h1>
-  
-    <ion-card-content>
-      <ion-button href="./seguridad" expand="block" color="tertiary">Volver</ion-button> 
-      
-      <ion-card-content>
-        <ion-button href="./seguridad" expand="block" color="warning">Cancelar</ion-button> 
-      </ion-card-content>
-        <ion-button href="./menu-inicio" fill="clear">Volver al menú</ion-button>
-    
-    </ion-card-content>
-  </ion-content>
-</ion-list>
 
+    <h2>Por favor permanezca en un lugar seguro:</h2>
+    <h3 style="color:grey">
+      <ul>
+        <li>Se dirige personal de seguridad a atender la emergencia.</li>
+        <hr>
+        <li>Se activarán alarmas y protocolo de emergencias.</li>
+      </ul>
+    </h3>   
+        <ion-button href="./seguridad" expand="block" color="warning">Cancelar</ion-button> 
+    <h6>
+      <i>*Se cancelará el protocolo de seguridad cancelando las <b>acciones de emergencia.</b></i>
+    </h6>
+
+  </ion-list>
+
+   <hr>
+
+    <ion-button href="./menu-inicio" expand="block" color="primary">Volver al menú</ion-button>
