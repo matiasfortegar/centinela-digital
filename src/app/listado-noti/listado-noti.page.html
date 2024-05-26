@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Historial de Notificaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let noti of notis">
+      <ion-label>
+        <p>Notificaion: {{ noti.notificar }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-item>
+  <ion-button [routerLink]="['/menu-inicio']" expand="block">Volver al menú</ion-button>
+</ion-item>

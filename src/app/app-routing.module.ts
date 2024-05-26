@@ -51,7 +51,11 @@ const routes: Routes = [
   {
     path: 'noti-exitosa',
     loadChildren: () => import('./noti-exitosa/noti-exitosa.module').then( m => m.NotiExitosaPageModule)
+  },  {
+    path: 'listado-noti',
+    loadChildren: () => import('./listado-noti/listado-noti.module').then( m => m.ListadoNotiPageModule)
   }
+
 
 ];
 @NgModule({
